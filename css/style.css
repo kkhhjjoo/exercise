@@ -1,0 +1,67 @@
+.wrapper {
+  width: calc(80px + 255px);
+  height: calc(20px + 80px + 20px + 60px + 20px);
+  padding: 20px 40px;
+  border: 1px solid black;
+  display: flow-root;
+  position: relative;
+}
+
+figure {
+  width: 80px;
+  height: 80px;
+  float: left;
+  margin-left: -70px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #999;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  figcaption {
+    /* display: none; */
+    width: 160px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #333;
+    font-size: 16px;
+    text-align: center;
+    align-content: center;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+  }
+  figcaption:hover {
+    display: block;
+  }
+}
+
+figure {
+  &:first-child {
+    margin-left: 0;
+
+    &:first-child img {
+      z-index: 5;
+    }
+  }
+
+  &:nth-child(2) img {
+    z-index: 4;
+  }
+  &:nth-child(3) img {
+    z-index: 3;
+    filter: grayscale(1);
+  }
+  &:nth-child(4) img {
+    z-index: 2;
+    filter: grayscale(1);
+  }
+  &:nth-child(5) img {
+    z-index: 1;
+    filter: grayscale(1);
+  }
+}
